@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Bar } from 'react-chartjs-2';
+// eslint-disable-next-line no-unused-vars
 import { Chart as ChartJS } from 'chart.js/auto';
 import { DailyData } from '../Data';
 
 
 function Hourly() {
   const daily = DailyData.activity_series.records;
+  // eslint-disable-next-line no-unused-vars
   const [dailyDogData, setDailyDogData] = useState({
     labels: daily.map((timestamp) => timestamp.date), // a list of each bar
     datasets: [{

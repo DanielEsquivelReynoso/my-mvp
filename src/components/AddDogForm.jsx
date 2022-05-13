@@ -7,6 +7,7 @@ const AddDog = () => {
   const [newDogAge, setNewDogAge] = useState(0);
   const [newDogWeight, setNewDogWeight] = useState(0);
   const [newDogBreed, setNewDogBreed] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [dogs, setDogs] = useState([]);
   const dogsCollectionRef = collection(db, "dogs");
 
@@ -23,6 +24,7 @@ const AddDog = () => {
     }
 
     getDogs();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="App">

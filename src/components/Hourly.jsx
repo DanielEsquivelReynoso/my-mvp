@@ -6,6 +6,7 @@ import { HourlyData } from '../Data';
 function Hourly() {
 
   const data = HourlyData.activity_series.records;
+  // eslint-disable-next-line no-unused-vars
   const [hourlyDogData, setHourlyDogData] = useState({
     labels: data.map((timestamp) => timestamp.date), // a list of each bar
     datasets: [{
