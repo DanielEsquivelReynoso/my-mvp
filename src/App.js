@@ -13,14 +13,15 @@ import DogList from './components/DogList';
 function App() {
   return (
     <Router>
-      <DogList />
       <nav>
-        <Link to='/'>Dog Check</Link>
-        <Link to='/dogHealthData'>Dog Health Data</Link>
+        <Link to='/'>Dog Search</Link>
+        <Link to='/addDog'>Add Dog</Link>
+        <Link to='/dogList'>Dog List</Link>
       </nav>
       <Routes>
         <Route path='/' element={<DogCheck/>}/>
-        <Route></Route>
+        <Route path='/addDog' element={<AddDogForm />} />
+        <Route path='/dogList' element={<DogList />}/>
         <Route path='/dogHealthData' element={<DogHealthDataDashboard />}/>
         <Route path='/activityInput' />
       </Routes>

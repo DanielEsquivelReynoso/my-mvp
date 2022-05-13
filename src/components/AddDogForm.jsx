@@ -53,7 +53,7 @@ const AddDog = () => {
         }}
       />
       <button onClick={addDog}>Add Dog</button>
-      <table border='1'>
+      {/* <table border='1'>
       <tr>
         <th>Name</th>
         <th>Age</th>
@@ -70,7 +70,7 @@ const AddDog = () => {
           </tr>
         );
       })}
-      </table>
+      </table> */}
     </div>
   );
 }

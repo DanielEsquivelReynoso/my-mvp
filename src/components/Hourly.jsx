@@ -9,13 +9,13 @@ function Hourly() {
   const [hourlyDogData, setHourlyDogData] = useState({
     labels: data.map((timestamp) => timestamp.date), // a list of each bar
     datasets: [{
-      label: `minutes of activity for ${data[0].date}`,
+      label: `minutes of activity per hour`,
       data: data.map((rest) => rest.min_active),
       backgroundColor: [
         "rgba(75,192,192,1)"
       ],
       borderColor: "black",
-      borderWidth: 3,
+      borderWidth: 3
     }]
   })
   return (
