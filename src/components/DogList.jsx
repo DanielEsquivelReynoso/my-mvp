@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { db } from '../firebase-config';
-import { collection, getDocs, addDoc } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 
 const DogList = () => {
 
@@ -16,7 +16,7 @@ const DogList = () => {
     }
 
     getDogs();
-  }, []);
+  });
   return (
     <table border='3'>
       <tr>

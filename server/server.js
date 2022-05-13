@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('../src/firebase-config.js');
+// const db = require('../src/firebase-config.js');
 
 const app = express();
 

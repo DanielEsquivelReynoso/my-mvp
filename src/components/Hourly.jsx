@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS } from 'chart.js/auto';
 import { HourlyData } from '../Data';
 
 
 function Hourly() {
+
   const data = HourlyData.activity_series.records;
   const [hourlyDogData, setHourlyDogData] = useState({
     labels: data.map((timestamp) => timestamp.date), // a list of each bar
