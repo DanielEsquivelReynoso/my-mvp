@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import AddDogForm from './components/AddDogForm';
+
+// import BarChart from './components/BarChart';
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import DogCheck from './components/DogCheck';
+import DogHealthDataDashboard from './components/DogHealthDataDashboard';
+import DogList from './components/DogList';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <DogList />
+      <nav>
+        <Link to='/'>Dog Check</Link>
+        <Link to='/dogHealthData'>Dog Health Data</Link>
+      </nav>
+      <Routes>
+        <Route path='/' element={<DogCheck/>}/>
+        <Route></Route>
+        <Route path='/dogHealthData' element={<DogHealthDataDashboard />}/>
+        <Route path='/activityInput' />
+      </Routes>
+    </Router>
   );
 }
 
